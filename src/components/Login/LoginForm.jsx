@@ -1,9 +1,14 @@
-import { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form";
 import { loginUser } from "../../api/user";
+import { useState, useEffect } from "react";
+import { storageRead } from "../../utils/storage";
+import { useUser } from "../../context/UserContext";
+import { useNavigate } from "react-router-dom";
+import { STORAGE_KEY_USER } from "../../const/storageKeys";
 
 const usernameConfig = {
     required: true,
-    minLength: 3
+    minLength: 3,
 }
 
 const LoginForm = () => {
@@ -12,47 +17,63 @@ const LoginForm = () => {
         handleSubmit,
         formState: { errors }
     } = useForm();
+    const {user, setUser} = useUser();
+    const navigate = useNavigate();
+
+    const [loading, setLoading] = useState(false);
+    const [apiError, setApiError] = useState(null);
+
+    useEffect(() => {
+        console.log("user", user);
+        if (user !== null) {
+            navigate("/profile");
+        }
+    }, [user, navigate]);
 
     const onSubmit = async ({username}) => {
-        const [error, user] = await loginUser(username)
-        console.log("error: " + error);
-        console.log("user: " + user);
-    }
 
-    console.log(errors);
+        setLoading(true);
+        const [error, userResponse] = await loginUser(username);
+        if (error !== null) {
+            setApiError(error);
+        }
+        if (userResponse !== null) {
+            storageRead(STORAGE_KEY_USER, userResponse);
+            setUser(userResponse);
+        }
+        setLoading(false);
+    }
 
     const errorMessage = (() => {
         if (!errors.username) {
-            return null
+            return null;
         }
-
         if (errors.username.type === "required") {
-            return <span>Username is required</span> 
+            return <span>Username is required</span>;
         }
-
         if (errors.username.type === "minLength") {
-            return <span>Username is too short</span>
+            return <span>Username is too short</span>;
         }
-    })()
+    })(); 
 
     return (
         <>
-            <h2>What's your name?</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <h2>Please Enter Your Name</h2>
+            <form onSubmit={ handleSubmit(onSubmit) }>
                 <fieldset>
                     <label htmlFor="username">Username: </label>
-                    <input
-                        type="text"
-                        placeholder="your name"
-                        {...register("username", usernameConfig)} />
+                    <input 
+                    type="text" 
+                    placeholder="your name" 
+                    { ...register("username", usernameConfig) } />
                     { errorMessage }
                 </fieldset>
-
                 <button type="submit">Continue</button>
-            </form>
 
+                {loading && <p>Logging in...</p>}
+                {apiError && <p>{ apiError }</p>}
+            </form>
         </>
     )
 }
-
-export default LoginForm
+export default LoginForm;
