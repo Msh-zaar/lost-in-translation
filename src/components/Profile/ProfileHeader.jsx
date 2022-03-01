@@ -1,8 +1,7 @@
-const ProfileHeader = ({username}) => {
+const ProfileHeader = ( {username}) => {
     return (
-        <header>
-            <h4>Hello! You are logged in as: {username}</h4>
-        </header>
+        <h3 class="py-2 px-4 font-semibold rounded-lg shadow-md">Welcome, {username}</h3>
     )
 }
-export default ProfileHeader;
+
+export default ProfileHeader

@@ -58,19 +58,19 @@ const LoginForm = () => {
 
     return (
         <>
-            <h2>Please Enter Your Name</h2>
-            <form onSubmit={ handleSubmit(onSubmit) }>
-                <fieldset>
-                    <label htmlFor="username">Username: </label>
+            <form class="flex flex-col" onSubmit={ handleSubmit(onSubmit) }>
+                <fieldset class="flex flex-col items-center">
+                    <label htmlFor="username">Please Enter Your Name: </label>
                     <input 
                     type="text" 
-                    placeholder="your name" 
+                    placeholder="..." 
+                    class="form-input px-4 py-3 rounded-full"
                     { ...register("username", usernameConfig) } />
                     { errorMessage }
                 </fieldset>
-                <button type="submit">Continue</button>
+                <button class="btn-primary" type="submit">Continue</button>
 
-                {loading && <p>Logging in...</p>}
+                {loading && <p>Loading...</p>}
                 {apiError && <p>{ apiError }</p>}
             </form>
         </>

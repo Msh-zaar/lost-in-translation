@@ -1,7 +1,6 @@
 import UserProvider from "./UserContext";
 
 const AppContext = (props) => {
-    
     return (
         <UserProvider>
             {props.children}

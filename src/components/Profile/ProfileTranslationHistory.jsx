@@ -1,17 +1,15 @@
-import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem";
+import ProfileTranslateHistoryItem from "./ProfileTranslationHistoryItem"
 
-const ProfileTranslationHistory = ({ translations }) => {
-
-    // TODO change key to index(?)
-    const translationList = translations.map((translation) => <ProfileTranslationHistoryItem key={translation} item={translation} />);
-
+const ProfileTranslateHistory = ({ translations }) => {
     return (
         <section>
-            <h4>Your translation history:</h4>
+            <h4>Your translation history</h4>
             <ul>
-                {translationList}
+                { translations.map((translation, index) => 
+                    <ProfileTranslateHistoryItem key={ index + "-" + translation } translation={ translation }/>) }
             </ul>
         </section>
     )
 }
-export default ProfileTranslationHistory;
+
+export default ProfileTranslateHistory

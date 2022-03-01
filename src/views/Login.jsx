@@ -3,7 +3,9 @@ import LoginForm from "../components/Login/LoginForm"
 const Login = () => {
     return (
         <>
-            <h1>LOGIN</h1>
+            <div class="flex">
+                <h1 class="py-2 px-4 bg-gray font-semibold shadow-md">LOGIN</h1>
+            </div>
             <LoginForm />
         </>
     )

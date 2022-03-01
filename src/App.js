@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./views/Login";
 import Translations from "./views/Translations";
@@ -9,9 +8,8 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="App">
-      <header className="App-header">
-      </header>
+    <div className="App" class="flex flex-col justify-center">
+      <header className="App-header"></header>
       <Navbar />
       <Routes>
         <Route path="/" element={ <Login/> } />

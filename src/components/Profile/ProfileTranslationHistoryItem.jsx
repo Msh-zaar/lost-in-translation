@@ -1,4 +1,6 @@
-const ProfileTranslationHistoryItem = ({item}) => {
-    return  <li>{item}</li>;
+const ProfileTranslateHistoryItem = ( {translation} ) => {
+    return (
+        <li>{ translation }</li>
+    )
 }
-export default ProfileTranslationHistoryItem;
+export default ProfileTranslateHistoryItem

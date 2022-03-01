@@ -1,8 +1,36 @@
-import withAuth from "../hoc/withAuth";
+import TranslationForm from "../components/Translations/TranslationForm";
+import { useUser } from "../context/UserContext";
+import { translationAdd } from "../api/translation"
+import { storageSave } from "../utils/storage";
+import { STORAGE_KEY_USER } from "../const/storageKeys";
 
-const Translations = () => {
+const Translation = () => {
+
+    const { user, setUser } = useUser()
+
+    const handleTranslationClicked = async translation => {
+        console.log(translation)
+
+        const [error, updatedUser] = await translationAdd(user, translation)
+
+        if (error !== null){
+
+        }
+        storageSave(STORAGE_KEY_USER, updatedUser)
+        setUser(updatedUser)
+        
+        console.log("error: " + error)
+        console.log("result:" + updatedUser)
+    }
+
     return (
-        <h1>Translations</h1>
+        <>
+            <div class="flex">
+                <h1 class="py-2 px-4 bg-gray font-semibold shadow-md">TRANSLATION</h1>
+            </div>
+            <TranslationForm onTranslate={ handleTranslationClicked }/>
+        </>
     )
 }
-export default withAuth(Translations);
+
+export default Translation
