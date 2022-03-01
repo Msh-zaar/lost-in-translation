@@ -1,106 +1,106 @@
 export const individual_signs = [
     {
-        char: "a",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "a",
+        img: "LostInTranslation_Resources/individial_signs/a.png"
     },
     {
-        char: "b",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "b",
+        img: "LostInTranslation_Resources/individial_signs/b.png"
     },
     {
-        char: "c",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "c",
+        img: "LostInTranslation_Resources/individial_signs/c.png"
     },
     {
-        char: "d",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "d",
+        img: "LostInTranslation_Resources/individial_signs/d.png"
     },
     {
-        char: "e",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "e",
+        img: "LostInTranslation_Resources/individial_signs/e.png"
     },
     {
-        char: "f",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "f",
+        img: "LostInTranslation_Resources/individial_signs/f.png"
     },
     {
-        char: "g",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "g",
+        img: "LostInTranslation_Resources/individial_signs/g.png"
     },
     {
-        char: "h",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "h",
+        img: "LostInTranslation_Resources/individial_signs/h.png"
     },
     {
-        char: "i",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "i",
+        img: "LostInTranslation_Resources/individial_signs/i.png"
     },
     {
-        char: "j",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "j",
+        img: "LostInTranslation_Resources/individial_signs/j.png"
     },
     {
-        char: "k",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "k",
+        img: "LostInTranslation_Resources/individial_signs/k.png"
     },
     {
-        char: "l",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "l",
+        img: "LostInTranslation_Resources/individial_signs/l.png"
     },
     {
-        char: "m",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "m",
+        img: "LostInTranslation_Resources/individial_signs/m.png"
     },
     {
-        char: "n",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "n",
+        img: "LostInTranslation_Resources/individial_signs/n.png"
     },
     {
-        char: "o",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "o",
+        img: "LostInTranslation_Resources/individial_signs/o.png"
     },
     {
-        char: "p",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "p",
+        img: "LostInTranslation_Resources/individial_signs/p.png"
     },
     {
-        char: "q",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "q",
+        img: "LostInTranslation_Resources/individial_signs/q.png"
     },
     {
-        char: "r",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "r",
+        img: "LostInTranslation_Resources/individial_signs/r.png"
     },
     {
-        char: "s",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "s",
+        img: "LostInTranslation_Resources/individial_signs/s.png"
     },
     {
-        char: "t",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "t",
+        img: "LostInTranslation_Resources/individial_signs/t.png"
     },
     {
-        char: "u",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "u",
+        img: "LostInTranslation_Resources/individial_signs/u.png"
     },
     {
-        char: "v",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "v",
+        img: "LostInTranslation_Resources/individial_signs/v.png"
     },
     {
-        char: "w",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "w",
+        img: "LostInTranslation_Resources/individial_signs/w.png"
     },
     {
-        char: "x",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "x",
+        img: "LostInTranslation_Resources/individial_signs/x.png"
     },
     {
-        char: "y",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "y",
+        img: "LostInTranslation_Resources/individial_signs/y.png"
     },
     {
-        char: "z",
-        img: "public\LostInTranslation_Resources\individial_signs\a.png"
+        letter: "z",
+        img: "LostInTranslation_Resources/individial_signs/z.png"
     },
 ]

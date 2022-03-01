@@ -18,14 +18,11 @@ const Translation = () => {
         }
         storageSave(STORAGE_KEY_USER, updatedUser)
         setUser(updatedUser)
-        
-        console.log("error: " + error)
-        console.log("result:" + updatedUser)
     }
 
     return (
         <>
-            <div class="flex">
+            <div>
                 <h1 class="py-2 px-4 bg-gray font-semibold shadow-md">TRANSLATION</h1>
             </div>
             <TranslationForm onTranslate={ handleTranslationClicked }/>

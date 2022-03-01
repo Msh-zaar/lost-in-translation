@@ -18,7 +18,7 @@ const TranslationForm = ( {onTranslate} ) => {
             let translation = event.target.value.split("")
             translation.map(char => {
                 individual_signs.map(x => {   
-                    if (x.char === char) {
+                    if (x.letter === char) {
                         images.push(<img src={x.img}></img>)
                     }
                 })
@@ -29,13 +29,17 @@ const TranslationForm = ( {onTranslate} ) => {
         }
     }
     return (
-        <form onSubmit={ handleSubmit(onSubmit)}>
-            <fieldset>
-                <input class="form-input px-4 py-3 rounded-full" type="text" { ...register("translation")} placeholder="translate" onChange={handleInput}/>
-                <button class="btn-primary" type="submit">Save Translation</button>
-            </fieldset>
-            {input.map(x => x)}
-        </form>
+        <>
+            <form onSubmit={ handleSubmit(onSubmit)}>
+                <fieldset>
+                    <input class="form-input px-4 py-3 rounded-full" type="text" { ...register("translation")} placeholder="translate" onChange={handleInput}/>
+                    <button class="btn-primary" type="submit">Save Translation</button>
+                </fieldset>
+            </form>
+            <div class="flex flex-row items-center">
+                {input.map(x => x)}
+            </div>
+        </>
     )
 }
 
