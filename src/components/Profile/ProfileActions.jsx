@@ -8,14 +8,14 @@ const ProfileActions = () => {
     const { user, setUser } = useUser()
 
     const handleLogoutClick = () => {
-        if (window.confirm("Are you sure?")) {
+        if (window.confirm("Confirm logout?")) {
             storageDelete(STORAGE_KEY_USER)
             setUser(null)
         }
     }
 
     const handleClearHistoryClick = () => {
-        if (window.confirm("This cannot be undone!")) {
+        if (window.confirm("This will permanently delete your translation history, are you sure?")) {
 
             const updatedUser = {
                 ...user,
@@ -29,7 +29,7 @@ const ProfileActions = () => {
 
     return (
         <div class="flex">
-            <span class="py-2 px-4 bg-blue font-semibold rounded-lg shadow-md hover:bg-green"><Link to="/translations">Translate</Link></span>
+            <span class="btn-primary"><Link to="/translations">Translate</Link></span>
             <button class="btn-primary" onClick={ handleClearHistoryClick }>Clear</button>
             <button class="btn-primary" onClick={ handleLogoutClick }>Logout</button>
         </div>

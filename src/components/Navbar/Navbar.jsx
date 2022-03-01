@@ -16,19 +16,16 @@ const Navbar = () => {
                 
                 {user !== null && 
                 <ul class="flex flex-row space-x-4 text-sm font-medium">
-                    <li class="block py-2 pr-4 pl-3 text-gray-dark bg-blue hover:bg-green rounded md:bg-transparent">
+                    <li class="btn-primary">
                         <NavLink to="/translations">Translations</NavLink>
                     </li>
-                    <li class="block py-2 pr-4 pl-3 text-gray-dark bg-blue hover:bg-green rounded md:bg-transparent">
+                    <li class="btn-primary">
                         <NavLink to="/profile">Profile</NavLink>
                     </li>
                     
                 </ul>
                 }
             </div>
-            
-
-            
         </nav>
     )
 }

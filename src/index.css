@@ -18,7 +18,11 @@ code {
 
 @layer components {
   .btn-primary {
-    @apply bg-blue hover:bg-green text-white font-bold py-2 px-4 border border-green rounded;
+    @apply bg-blue hover:bg-green font-bold py-2 px-4 border border-black rounded;
   }
+  .btn-secondary {
+    @apply bg-blue font-bold py-2 px-4 border border-l-yellow rounded;
+  }
+
 }
 

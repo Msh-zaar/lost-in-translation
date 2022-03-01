@@ -70,7 +70,10 @@ const LoginForm = () => {
                 </fieldset>
                 <button class="btn-primary" type="submit">Continue</button>
 
-                {loading && <p>Loading...</p>}
+                {loading && <button class="bg-blue mt-1" disabled>
+                                <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                                </svg> Loading...
+                            </button>}
                 {apiError && <p>{ apiError }</p>}
             </form>
         </>

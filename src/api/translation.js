@@ -13,7 +13,7 @@ export const translationAdd = async (user, translation) => {
         })
 
         if (!response.ok) {
-            throw new Error("Could not update the order")
+            throw new Error("Could not add the translation")
         }
         const result = await response.json()
         return [ null, result ]
@@ -22,7 +22,7 @@ export const translationAdd = async (user, translation) => {
     }
 }
 
-export const orderClearHistory = async (userId) => {
+export const translationClearHistory = async (userId) => {
     try {
         const response = await fetch(`${apiUrl}/${userId}`, {
             method: "PATCH",
@@ -32,7 +32,7 @@ export const orderClearHistory = async (userId) => {
             })
         })
         if (!response.ok) {
-            throw new Error("Could not clear translations")
+            throw new Error("Could not clear the translations")
         }
         const result = await response.json()
         return [ null, result ]
